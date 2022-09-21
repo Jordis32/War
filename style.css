@@ -1,19 +1,44 @@
 *,
-*::after,
-*::before {
-    box-sizing: border-box;
+body,
+.computer-deck,
+.player-deck {
+    margin: 10%;
+    padding: 10%;
+    justify-content: top;
 }
 
+#click {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    padding-top: -50px;
+    margin-top: -30px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: white;
+    background-color: dimgrey;
+}
+
+*{
+    background-image: url("./pics/table.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 body {
-    background-color: darkgray;
     margin: 50;
     display: grid;
     grid-template-columns: repeat(2, 4rem);
     grid-template-rows: 7rem 2rem 7rem;
     gap: .5rem;
-    cursor: pointer;
     justify-content: center;
-    padding-top: 200px;
+    padding-top: 20px;
 }
 
 .deck {
@@ -23,20 +48,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    border-radius: .5rem;
+    font-size: 50px;
+    border-radius: 5px;
     color: white;
     user-select: none;
 }
 
-h1 {
+#gametitle {
     padding-top: -5px;
     padding-left: 3px;
     padding-right: 400px;
     display: flex;
     margin: -40px;
-    justify-content: right;
-    align-content: right;
+    justify-content: top;
+    align-content: top;
     font-size: 30px;
 }
 
@@ -44,27 +69,46 @@ h1 {
     background-color: purple;
 }
 
+#player {
+    display: flex;
+    justify-items: right;
+    justify-content: right;
+    align-items: center;
+    margin-top: 299px;
+    margin-left: 65px;
+}
+
+#com {
+    display: flex;
+    justify-items: right;
+    justify-content: right;
+    align-items: center;
+    margin-top: -130px;
+    margin-left: 550px;
+}
+
 .player-deck {
     background-color: black;
 }
 
 .text {
-    grid-column: span 30;
+    grid-column: span 10;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .card {
+    margin-top: 18px;
     position: relative;
     height: 100%;
     width: 100%;
     border: 1px solid black;
-    border-radius: .5rem;
+    border-radius: .4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 70px;
 }
 
 .card.black {
@@ -84,7 +128,7 @@ h1 {
 
 .card::before {
     top: .5rem;
-    left: .5rem
+    left: .5rem;
 }
 
 .card::after {

@@ -41,7 +41,7 @@ export default class Deck {
         }
     }
 }
-
+// within
 class Card {
     constructor(suit, value) {
         this.suit = suit
@@ -49,9 +49,9 @@ class Card {
     }
 
     get color() {
-        return this.suit === "♣" || this.suit === "♠" ? "black" : "red"
-    }
-
+            return this.suit === "♣" || this.suit === "♠" ? "black" : "red"
+        }
+        // 
     getHTML() {
         const cardDiv = document.createElement("div")
         cardDiv.innerText = this.suit
